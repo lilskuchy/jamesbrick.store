@@ -1,0 +1,14 @@
+<!-- assets/logo.svg
+     Simple elegant SVG logo placeholder for jamesbrick.store
+     Replace with your logo artwork (vector or PNG)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">jamesbrick.store</title>
+  <rect width="240" height="60" rx="8" fill="#0F1724" opacity="0.04"/>
+  <g transform="translate(8,6)">
+    <rect x="0" y="0" width="44" height="44" rx="6" fill="#B88931"/>
+    <path d="M8 10h28v4H8zM8 18h28v4H8z" fill="#fff" opacity="0.95"/>
+    <text x="64" y="30" fill="#0F1724" font-family="Inter, Arial" font-weight="700" font-size="20">jamesbrick</text>
+    <text x="64" y="47" fill="#7B7B7B" font-family="Inter, Arial" font-weight="500" font-size="12">.store</text>
+  </g>
+</svg>

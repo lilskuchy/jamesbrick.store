@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — jamesbrick.store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="JamesBrick Store">
+        <img src="logo.svg" alt="jamesbrick.store logo" class="logo">
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/+447700141991" target="_blank" rel="noopener">WhatsApp</a>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container about-page">
+    <!-- About Page component -->
+    <section class="about-hero">
+      <h1>Our Mission</h1>
+      <p class="lead">To curate exceptional Lego collections that celebrate design, history, and the joy of building—presented with a premium, collector-focused experience.</p>
+    </section>
+
+    <section class="about-content">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Curated quality</h2>
+          <p>We source sets and elements for condition, authenticity, and presentation. Each listing is inspected and documented to maintain the highest standards for collectors and hobbyists.</p>
+
+          <h2>Responsible sourcing</h2>
+          <p>We prioritize trusted providers and transparent histories for each set—ensuring fair pricing and clear provenance.</p>
+        </div>
+
+        <div class="about-images">
+          <img src="assets/carefully%20coratedset.webp" alt="Carefully curated sets" loading="lazy">
+          <img src="assets/packaging.webp" alt="Packaging and presentation" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="jamesbrick.store" class="logo-small">
+      </div>
+      <div class="footer-links">
+        <nav aria-label="Footer Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-contact">
+        <p class="muted">© <span id="year-4"></span> jamesbrick.store</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

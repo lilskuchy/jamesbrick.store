@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — jamesbrick.store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header (reused layout) -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="JamesBrick Store">
+        <img src="logo.svg" alt="jamesbrick.store logo" class="logo">
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/PHONE_NUMBER" target="_blank" rel="noopener">WhatsApp</a>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Shop Header -->
+    <section class="shop-header">
+      <h1>Shop</h1>
+      <p class="lead">Explore our curated collection. Click "Order Now" to request an order — it will open your email client to complete the purchase request.</p>
+    </section>
+
+    <!-- Shop Grid -->
+    <!-- Product Grid component: each card has image, name, price, Order Now -->
+    <section class="shop-grid" id="shop-grid">
+      <!-- Example product card -->
+      <article class="product-card" id="vintage-space">
+        <img src="https://images.unsplash.com/photo-1542293787938-c9e299b8803f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a3b4b8d7e9f30c8a2d4c3dc3d9e4f7a6" alt="Vintage Space Cruiser" loading="lazy">
+        <div class="product-body">
+          <h3>Vintage Space Cruiser</h3>
+          <p class="price">$179.00</p>
+          <button class="btn btn-primary order-now" data-product="Vintage Space Cruiser" data-price="$179.00">Order Now</button>
+        </div>
+      </article>
+
+      <article class="product-card" id="landmark">
+        <img src="https://images.unsplash.com/photo-1606813902897-2d6f7f0a2c12?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=a8f6b7c2d3e4a5b6c7d8e9f0a1b2c3d4" alt="Architectural Landmark" loading="lazy">
+        <div class="product-body">
+          <h3>Architectural Series — Landmark</h3>
+          <p class="price">$249.00</p>
+          <button class="btn btn-primary order-now" data-product="Architectural Series — Landmark" data-price="$249.00">Order Now</button>
+        </div>
+      </article>
+
+      <article class="product-card" id="classic-car">
+        <img src="https://images.unsplash.com/photo-1590327333184-1bc2a6f2b7cc?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b2d1f0c5e6a7b8c9d0e1f2a3b4c5d6e" alt="Collector's Classic Car" loading="lazy">
+        <div class="product-body">
+          <h3>Collector's Classic Car</h3>
+          <p class="price">$199.00</p>
+          <button class="btn btn-primary order-now" data-product="Collector's Classic Car" data-price="$199.00">Order Now</button>
+        </div>
+      </article>
+
+      <!-- Add more product cards as needed -->
+    </section>
+  </main>
+
+  <!-- Order Modal -->
+  <!-- Modal component: order form opens in a modal and submits to email via mailto -->
+  <div id="order-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="order-modal-title">
+    <div class="modal-backdrop" tabindex="-1"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="order-modal-close" aria-label="Close order form">&times;</button>
+      <h2 id="order-modal-title">Order Request</h2>
+      <form id="order-form">
+        <input type="hidden" id="order-product" name="product">
+        <div class="form-row">
+          <label for="customer-name">Name</label>
+          <input id="customer-name" name="name" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="customer-email">Email</label>
+          <input id="customer-email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="order-quantity">Quantity</label>
+          <input id="order-quantity" name="quantity" type="number" min="1" value="1">
+        </div>
+        <div class="form-row">
+          <label for="order-message">Message (optional)</label>
+          <textarea id="order-message" name="message" rows="4"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Order Request</button>
+          <button type="button" class="btn btn-ghost" id="order-cancel">Cancel</button>
+        </div>
+      </form>
+      <p class="muted note">This form will open your email client to send the order request to our store email.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="jamesbrick.store" class="logo-small">
+      </div>
+      <div class="footer-links">
+        <nav aria-label="Footer Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" aria-current="page">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-contact">
+        <p class="muted">© <span id="year-2"></span> jamesbrick.store</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
