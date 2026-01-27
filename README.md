@@ -1,2 +1,2 @@
-# jamesbrick.store
+# jamesbrickstore
 A lego website
