@@ -6,6 +6,104 @@
   <title>Contact — jamesbrick.store</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Page-specific styles to keep layout self-contained and add hover shadows -->
+  <style>
+    .contact-page { padding: 48px 0; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* Make it responsive */
+    @media (max-width: 880px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-form {
+      background: var(--card-bg, #fff);
+      border-radius: 8px;
+      padding: 24px;
+      transition: box-shadow .18s ease, transform .12s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    .contact-form:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+
+    .form-row { margin-bottom: 14px; }
+    .form-row label { display:block; margin-bottom:6px; font-weight:600; }
+    .form-row input, .form-row textarea {
+      width:100%;
+      padding:10px 12px;
+      border:1px solid #dcdcdc;
+      border-radius:6px;
+      font-family: inherit;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    .form-actions { margin-top: 12px; }
+
+    .contact-details {
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    /* Two method cards on the same line */
+    .contact-methods {
+      display:flex;
+      gap:12px;
+    }
+    .method-card {
+      flex:1;
+      background: var(--card-bg, #fff);
+      border-radius:8px;
+      padding:16px;
+      text-align:left;
+      transition: box-shadow .18s ease, transform .12s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+      min-width: 0;
+    }
+    .method-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0,0,0,.14);
+    }
+    .method-card h4 { margin:0 0 6px 0; font-size:16px; }
+    .method-card p { margin:0; font-size:14px; color:#333; word-break: break-word; }
+
+    .muted { color: #666; font-size: 14px; }
+
+    /* Success / error message */
+    .form-message {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      display: none;
+    }
+    .form-message.success {
+      display:block;
+      background: #e6ffef;
+      color: #085f3c;
+      border: 1px solid #b6f0c9;
+    }
+    .form-message.error {
+      display:block;
+      background: #fff2f2;
+      color: #7a0b0b;
+      border: 1px solid #f2c2c2;
+    }
+
+    /* small adjustments */
+    .note { margin-top: 8px; font-size: 13px; color: #666; }
+  </style>
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -22,7 +120,7 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/+447700141991" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/447700141991" target="_blank" rel="noopener">WhatsApp</a>
         <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
           <span class="hamburger"></span>
         </button>
@@ -31,15 +129,16 @@
   </header>
 
   <main class="container contact-page">
-    <!-- Contact Page component -->
     <section class="contact-intro">
       <h1>Contact</h1>
-      <p class="lead">Questions or custom order requests? Send us a message or reach out on WhatsApp.</p>
+      <p class="lead">Questions or custom order requests? Send us a message using the form or reach out on WhatsApp.</p>
     </section>
 
     <section class="contact-grid">
-      <div class="contact-form">
-        <form id="contact-form">
+      <!-- Contact Form -->
+      <div class="contact-form" aria-labelledby="contact-form-heading">
+        <h2 id="contact-form-heading">Send us a message</h2>
+        <form id="contact-form" autocomplete="on" novalidate>
           <div class="form-row">
             <label for="contact-name">Name</label>
             <input id="contact-name" name="name" type="text" required>
@@ -55,25 +154,38 @@
             <textarea id="contact-message" name="message" rows="6" required></textarea>
           </div>
 
+          <!-- Hidden fields for the provider (we use FormSubmit's AJAX endpoint below) -->
+          <input type="hidden" name="_subject" value="New message from jamesbrick.store contact form">
+          <input type="hidden" name="_captcha" value="false">
+
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button id="contact-submit" type="submit" class="btn btn-primary">Send Message</button>
           </div>
-          <p class="muted note">This will open your email client to send a message to our store email.</p>
+
+          <p class="muted note">Messages submitted here will be delivered to <strong>polo.b.theman@gmail.com</strong>.</p>
+
+          <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
         </form>
       </div>
 
-      <aside class="contact-details">
-        <h3>Visit / Mail</h3>
-        <p>JamesBrick Store</p>
-        <address>
-          78 Artisan Row<br>
-          Design Quarter, London<br>
-          UK
-        </address>
+      <!-- Contact Methods: two sections on the same line (email + WhatsApp) -->
+      <aside class="contact-details" aria-label="Contact methods">
+        <div class="contact-methods" role="list">
+          <div class="method-card" role="listitem" aria-label="Email">
+            <h4>Email</h4>
+            <p><a href="mailto:polo.b.theman@gmail.com">polo.b.theman@gmail.com</a></p>
+          </div>
 
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:polo.b.theman@gmail.com">STORE_EMAIL</a></p>
-        <p>WhatsApp: <a href="https://wa.me/+447700141991" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+          <div class="method-card" role="listitem" aria-label="WhatsApp">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/447700141991" target="_blank" rel="noopener">+44 7700 141991</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h3>How we handle messages</h3>
+          <p class="muted">Use the form to send a message directly to our store email. For quick chats use WhatsApp — we'll typically respond within one business day.</p>
+        </div>
       </aside>
     </section>
   </main>
@@ -101,5 +213,59 @@
   </footer>
 
   <script src="main.js" defer></script>
+
+  <!-- Contact form AJAX handler using FormSubmit's AJAX endpoint.
+       This sends the form contents to polo.b.theman@gmail.com without leaving the page.
+       If you prefer a server-side solution, replace this with your own endpoint. -->
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('contact-submit');
+      const msgBox = document.getElementById('form-message');
+
+      // FormSubmit AJAX endpoint (delivers to the email)
+      const endpoint = 'https://formsubmit.co/ajax/polo.b.theman@gmail.com';
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        msgBox.className = 'form-message';
+        msgBox.textContent = '';
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            throw new Error(data.message || 'Failed to send message.');
+          }
+
+          // Success
+          msgBox.className = 'form-message success';
+          msgBox.textContent = 'Thanks — your message has been sent. We will get back to you soon.';
+          form.reset();
+        } catch (err) {
+          msgBox.className = 'form-message error';
+          msgBox.textContent = 'Sorry, there was a problem sending your message. You can email us directly at polo.b.theman@gmail.com or try again later.';
+          console.error('Contact form error:', err);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      });
+
+      // Accessibility: set the current year
+      const y = new Date().getFullYear();
+      const yEl = document.getElementById('year-4');
+      if (yEl) yEl.textContent = y;
+    })();
+  </script>
 </body>
 </html>
