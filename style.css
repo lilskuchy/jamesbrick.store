@@ -257,6 +257,60 @@ body{
 }
 .form-actions{display:flex; gap:.6rem; align-items:center}
 
+.contact-info-section {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  margin-top: 26px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  width: 100%;
+  max-width: 100%;
+  /* Align with contact-form */
+}
+
+.contact-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info-block {
+  flex: 1 1 0px;
+}
+
+.contact-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contact-info-list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #222;
+}
+
+.contact-info-block h3 {
+  font-size: 1.17rem;
+  margin: 0 0 10px 0;
+}
+
+@media (min-width: 769px) {
+  .contact-info-grid {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .contact-info-block {
+    min-width: 0;
+  }
+}
+
+/* For better spacing on the sides to match the contact form on small screens */
+@media (max-width: 480px) {
+  .contact-info-section {
+    padding: 16px 6px;
+  }
+}
+
 /* ---------------------------
    Modal (Order)
    --------------------------- */
@@ -421,4 +475,5 @@ body{
   .testimonial-card,
   .product-card,
   .btn{ transition: none !important; transform: none !important; }
+
 }
