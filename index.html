@@ -33,7 +33,7 @@
       <div class="header-actions">
         <!-- WhatsApp contact button (change phone number) -->
         <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/+447700141991" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">WhatsApp</a>
-        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
           <span class="hamburger"></span>
         </button>
       </div>
@@ -57,40 +57,16 @@
       </div>
     </section>
 
-    <!-- Featured Products -->
-    <!-- Product Grid component (featured subset) -->
+    <!-- Featured Products (replaced with carousel) -->
     <section class="featured container" aria-labelledby="featured-heading">
       <h2 id="featured-heading">Featured Collections</h2>
-      <div class="product-grid">
-        <!-- Product card 1 -->
-        <article class="product-card">
-          <img src="assets/Imperial%20star%20Destroyer%2075252.jpg" alt="Vintage Space Set" loading="lazy">
-          <div class="product-body">
-            <h3>Imperial star Destroyer 75252</h3>
-            <p class="price">$179.00</p>
-            <a class="btn btn-outline" href="shop.html#vintage-space">View</a>
-          </div>
-        </article>
-
-        <!-- Product card 2 -->
-        <article class="product-card">
-          <img src="assets/LEGO%2010182%20Caf%C3%A9%20Corner.jpeg" alt="LEGO 10182 Café Corner" loading="lazy">
-          <div class="product-body">
-            <h3>LEGO 10182 Café Corner</h3>
-            <p class="price">$249.00</p>
-            <a class="btn btn-outline" href="shop.html#landmark">View</a>
-          </div>
-        </article>
-
-        <!-- Product card 3 -->
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1590327333184-1bc2a6f2b7cc?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b2d1f0c5e6a7b8c9d0e1f2a3b4c5d6e" alt="Collector's Car Set" loading="lazy">
-          <div class="product-body">
-            <h3>Collector's Classic Car</h3>
-            <p class="price">$199.00</p>
-            <a class="btn btn-outline" href="shop.html#classic-car">View</a>
-          </div>
-        </article>
+      <div class="carousel" id="featured-carousel" aria-roledescription="carousel">
+        <button class="carousel-arrow prev" aria-label="Previous">‹</button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" role="list"></div>
+        </div>
+        <button class="carousel-arrow next" aria-label="Next">›</button>
+        <div class="carousel-dots" role="tablist" aria-label="Carousel pages"></div>
       </div>
     </section>
 
@@ -126,7 +102,7 @@
       <ul class="testimonials-grid" role="list">
         <li class="testimonial-card">
           <figure>
-            <img class="avatar" src="assets/images/review-01.jpg" alt="Photo of Emma L." loading="lazy">
+            <img class="avatar" src="assets/review-imgf02.jfif" alt="Photo of Emma L." loading="lazy">
             <figcaption>
               <p class="quote">"Exceptional condition and fast shipping. The Vintage Space Cruiser was exactly as described — a rare find. I'll be back."</p>
               <div class="author">
@@ -139,7 +115,7 @@
 
         <li class="testimonial-card">
           <figure>
-            <img class="avatar" src="assets/images/review-02.jpg" alt="Photo of Lucas P." loading="lazy">
+            <img class="avatar" src="assets/imgi_10_tyg.png" alt="Photo of Lucas P." loading="lazy">
             <figcaption>
               <p class="quote">"Beautiful presentation and great communication. The architecture set is a showpiece on my shelf."</p>
               <div class="author">
@@ -152,7 +128,7 @@
 
         <li class="testimonial-card">
           <figure>
-            <img class="avatar" src="assets/images/review-03.jpg" alt="Photo of Maya R." loading="lazy">
+            <img class="avatar" src="assets/review-imgf03.jfif" alt="Photo of Maya R." loading="lazy">
             <figcaption>
               <p class="quote">"Careful packing and thoughtful notes about the set's history — made this a premium buying experience."</p>
               <div class="author">
@@ -175,30 +151,19 @@
   <!-- Footer -->
   <!-- Footer component: social, links, copyright -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="logo.svg" alt="jamesbrick.store" class="logo-small">
-        <p class="muted">Premium Lego sets & curated collections</p>
-      </div>
+    <div class="container footer-inner footer-centered">
+      <nav aria-label="Footer Navigation" class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-      <div class="footer-links">
-        <nav aria-label="Footer Navigation">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="socials">
-          <a href="#" aria-label="Instagram" class="social">Instagram</a>
-          <a href="#" aria-label="Facebook" class="social">Facebook</a>
-        </div>
-      </div>
+      <hr class="footer-divider" aria-hidden="true">
 
-      <div class="footer-contact">
-        <p class="muted">© <span id="year"></span> jamesbrick.store • All rights reserved</p>
-      </div>
+      <p class="muted footer-copy">© <span id="year"></span> jamesbrick.store</p>
     </div>
   </footer>
 
