@@ -1,0 +1,866 @@
+[
+  {
+    "id": "product-1",
+    "name": "LEGO lego 10294 titanic",
+    "price": "$400",
+    "image": "/assets/products/product-1.jpeg"
+  },
+  {
+    "id": "product-2",
+    "name": "LEGO imperial star destroyer 75252",
+    "price": "$770",
+    "image": "/assets/products/product-2.jpg"
+  },
+  {
+    "id": "product-3",
+    "name": "LEGO ultimate collectors death star ii 10143",
+    "price": "$1900",
+    "image": "/assets/products/product-3.webp"
+  },
+  {
+    "id": "product-4",
+    "name": "LEGO lego 10182 cafe corner",
+    "price": "$1800",
+    "image": "/assets/products/product-4.jpeg"
+  },
+  {
+    "id": "product-5",
+    "name": "LEGO lego 10185 green grocer",
+    "price": "$1100",
+    "image": "/assets/products/product-5.jpeg"
+  },
+  {
+    "id": "product-6",
+    "name": "LEGO lego 10190 market street",
+    "price": "$1500",
+    "image": "/assets/products/product-6.jpeg"
+  },
+  {
+    "id": "product-7",
+    "name": "LEGO lego 10197 fire brigade",
+    "price": "$420",
+    "image": "/assets/products/product-7.webp"
+  },
+  {
+    "id": "product-8",
+    "name": "LEGO lego 10211 grand emporium",
+    "price": "$403",
+    "image": "/assets/products/product-8.jpeg"
+  },
+  {
+    "id": "product-9",
+    "name": "LEGO lego 10232 palace cinema",
+    "price": "$220",
+    "image": "/assets/products/product-9.jpeg"
+  },
+  {
+    "id": "product-10",
+    "name": "LEGO lego 10243 parisian restaurant",
+    "price": "$210",
+    "image": "/assets/products/product-10.jpg"
+  },
+  {
+    "id": "product-11",
+    "name": "LEGO lego 10245 santa's workshop",
+    "price": "$190",
+    "image": "/assets/products/product-11.jpeg"
+  },
+  {
+    "id": "product-12",
+    "name": "LEGO lego 10246 detectives office",
+    "price": "$250",
+    "image": "/assets/products/product-12.jpeg"
+  },
+  {
+    "id": "product-13",
+    "name": "LEGO lego 10255 assembly square",
+    "price": "$228",
+    "image": "/assets/products/product-13.webp"
+  },
+  {
+    "id": "product-14",
+    "name": "LEGO lego 10264 corner garage",
+    "price": "$150",
+    "image": "/assets/products/product-14.jpeg"
+  },
+  {
+    "id": "product-15",
+    "name": "LEGO lego 10270 bookshop",
+    "price": "$100",
+    "image": "/assets/products/product-15.jpeg"
+  },
+  {
+    "id": "product-16",
+    "name": "LEGO lego 10276 colosseum",
+    "price": "$800",
+    "image": "/assets/products/product-16.jpeg"
+  },
+  {
+    "id": "product-17",
+    "name": "LEGO lego 10278 police station for sale",
+    "price": "$190",
+    "image": "/assets/products/product-17.jpg"
+  },
+  {
+    "id": "product-18",
+    "name": "LEGO lego 10297 boutique hotel",
+    "price": "$116",
+    "image": "/assets/products/product-18.jpeg"
+  },
+  {
+    "id": "product-19",
+    "name": "LEGO 10307 eiffel tower",
+    "price": "$400",
+    "image": "/assets/products/product-19.webp"
+  },
+  {
+    "id": "product-20",
+    "name": "LEGO 10312 jazz club",
+    "price": "$170",
+    "image": "/assets/products/product-20.jpg"
+  },
+  {
+    "id": "product-21",
+    "name": "LEGO 10323 pac man arcade",
+    "price": "$200",
+    "image": "/assets/products/product-21.jpg"
+  },
+  {
+    "id": "product-22",
+    "name": "LEGO 10350 tudor corner",
+    "price": "$230",
+    "image": "/assets/products/product-22.jpg"
+  },
+  {
+    "id": "product-23",
+    "name": "LEGO 10356 star trek u.s.s enterprise",
+    "price": "$400",
+    "image": "/assets/products/product-23.jpeg"
+  },
+  {
+    "id": "product-24",
+    "name": "LEGO 10366 tropical aquarium",
+    "price": "$500",
+    "image": "/assets/products/product-24.jpeg"
+  },
+  {
+    "id": "product-25",
+    "name": "LEGO 21174 minecraft the modern treehouse",
+    "price": "$130",
+    "image": "/assets/products/product-25.png"
+  },
+  {
+    "id": "product-26",
+    "name": "LEGO 21359 italian riviera",
+    "price": "$330",
+    "image": "/assets/products/product-26.jpeg"
+  },
+  {
+    "id": "product-27",
+    "name": "LEGO 31122 fish tank",
+    "price": "$120",
+    "image": "/assets/products/product-27.jpeg"
+  },
+  {
+    "id": "product-28",
+    "name": "LEGO 40489 mr & mrs claus's living room",
+    "price": "$300",
+    "image": "/assets/products/product-28.jpeg"
+  },
+  {
+    "id": "product-29",
+    "name": "LEGO 41843 family christmas tree decoration",
+    "price": "$400",
+    "image": "/assets/products/product-29.jpeg"
+  },
+  {
+    "id": "product-30",
+    "name": "LEGO 70656 garmadon",
+    "price": "$150",
+    "image": "/assets/products/product-30.jpeg"
+  },
+  {
+    "id": "product-31",
+    "name": "LEGO 70657 ninjago city docks",
+    "price": "$400",
+    "image": "/assets/products/product-31.jpeg"
+  },
+  {
+    "id": "product-32",
+    "name": "LEGO 708 welcome to apocalypseburg",
+    "price": "$500",
+    "image": "/assets/products/product-32.jpeg"
+  },
+  {
+    "id": "product-33",
+    "name": "LEGO 71741 ninjago city gardens",
+    "price": "$260",
+    "image": "/assets/products/product-33.jpeg"
+  },
+  {
+    "id": "product-34",
+    "name": "LEGO 72046 gameboy nintendo display model",
+    "price": "$100",
+    "image": "/assets/products/product-34.jpeg"
+  },
+  {
+    "id": "product-35",
+    "name": "LEGO 75309 ucs republic gunship",
+    "price": "$400",
+    "image": "/assets/products/product-35.jpeg"
+  },
+  {
+    "id": "product-36",
+    "name": "LEGO 75397 jabba's sail barge",
+    "price": "$330",
+    "image": "/assets/products/product-36.webp"
+  },
+  {
+    "id": "product-37",
+    "name": "LEGO 75419 death star",
+    "price": "$1000",
+    "image": "/assets/products/product-37.jpeg"
+  },
+  {
+    "id": "product-38",
+    "name": "LEGO 76105 the hulkbuster",
+    "price": "$100",
+    "image": "/assets/products/product-38.jpeg"
+  },
+  {
+    "id": "product-39",
+    "name": "LEGO 76191 infinity gauntlet marvel display set",
+    "price": "$80",
+    "image": "/assets/products/product-39.jpeg"
+  },
+  {
+    "id": "product-40",
+    "name": "LEGO 21056 taj mahal",
+    "price": "$390",
+    "image": "/assets/products/product-40.webp"
+  },
+  {
+    "id": "product-41",
+    "name": "LEGO 10295 porsche 911",
+    "price": "$60",
+    "image": "/assets/products/product-41.webp"
+  },
+  {
+    "id": "product-42",
+    "name": "LEGO expert downtown diner",
+    "price": "$250",
+    "image": "/assets/products/product-42.webp"
+  },
+  {
+    "id": "product-43",
+    "name": "LEGO 43222 disney castle",
+    "price": "$290",
+    "image": "/assets/products/product-43.jpg"
+  },
+  {
+    "id": "product-44",
+    "name": "LEGO 71040 disney castle",
+    "price": "$380",
+    "image": "/assets/products/product-44.jpeg"
+  },
+  {
+    "id": "product-45",
+    "name": "LEGO 71044 train and station",
+    "price": "$320",
+    "image": "/assets/products/product-45.jpeg"
+  },
+  {
+    "id": "product-46",
+    "name": "LEGO ghostbusters ecto-1",
+    "price": "$200",
+    "image": "/assets/products/product-46.jpeg"
+  },
+  {
+    "id": "product-47",
+    "name": "LEGO 10217 harry potter diagon alley (2011)",
+    "price": "$290",
+    "image": "/assets/products/product-47.webp"
+  },
+  {
+    "id": "product-48",
+    "name": "LEGO 4842 harry potter hogwarts castle",
+    "price": "$125",
+    "image": "/assets/products/product-48.jpeg"
+  },
+  {
+    "id": "product-49",
+    "name": "LEGO 71043 harry potter hogwarts castle ultimate wizarding world set",
+    "price": "$300",
+    "image": "/assets/products/product-49.jpeg"
+  },
+  {
+    "id": "product-50",
+    "name": "LEGO 75955 harry potter hogwarts express",
+    "price": "$85",
+    "image": "/assets/products/product-50.jpeg"
+  },
+  {
+    "id": "product-51",
+    "name": "LEGO 75978 harry potter diagon alley",
+    "price": "$310",
+    "image": "/assets/products/product-51.webp"
+  },
+  {
+    "id": "product-52",
+    "name": "LEGO 76391 harry potter hogwarts icons collectors edition",
+    "price": "$290",
+    "image": "/assets/products/product-52.jpeg"
+  },
+  {
+    "id": "product-53",
+    "name": "LEGO 76405 harry potter hogwarts express collectors edition",
+    "price": "$410",
+    "image": "/assets/products/product-53.jpeg"
+  },
+  {
+    "id": "product-54",
+    "name": "LEGO 21330 home alone kevin's house",
+    "price": "$270",
+    "image": "/assets/products/product-54.jpeg"
+  },
+  {
+    "id": "product-55",
+    "name": "LEGO 10289 icons birds of paradise",
+    "price": "$70",
+    "image": "/assets/products/product-55.jpeg"
+  },
+  {
+    "id": "product-56",
+    "name": "LEGO icons lion knights castle",
+    "price": "$450",
+    "image": "/assets/products/product-56.webp"
+  },
+  {
+    "id": "product-57",
+    "name": "LEGO 10311 icons orchid",
+    "price": "$50",
+    "image": "/assets/products/product-57.png"
+  },
+  {
+    "id": "product-58",
+    "name": "LEGO 10316 the lord of the rings rivendell",
+    "price": "$419",
+    "image": "/assets/products/product-58.webp"
+  },
+  {
+    "id": "product-59",
+    "name": "LEGO 21348 dungeons & dragons red dragon's tale",
+    "price": "$340",
+    "image": "/assets/products/product-59.jpg"
+  },
+  {
+    "id": "product-60",
+    "name": "LEGO 21310 old fishing store",
+    "price": "$300",
+    "image": "/assets/products/product-60.jpeg"
+  },
+  {
+    "id": "product-61",
+    "name": "LEGO 76968 dinosaur fossils tyrannosaurus rex",
+    "price": "$360",
+    "image": "/assets/products/product-61.jpg"
+  },
+  {
+    "id": "product-62",
+    "name": "LEGO 762689 avengers tower",
+    "price": "$400",
+    "image": "/assets/products/product-62.jpeg"
+  },
+  {
+    "id": "product-63",
+    "name": "LEGO 76215 black panther",
+    "price": "$170",
+    "image": "/assets/products/product-63.jpeg"
+  },
+  {
+    "id": "product-64",
+    "name": "LEGO 76178 daily bugle",
+    "price": "$220",
+    "image": "/assets/products/product-64.jpeg"
+  },
+  {
+    "id": "product-65",
+    "name": "LEGO 76210 hulkbuster",
+    "price": "$370",
+    "image": "/assets/products/product-65.jpeg"
+  },
+  {
+    "id": "product-66",
+    "name": "LEGO 76218 sanctum sanctorum",
+    "price": "$182",
+    "image": "/assets/products/product-66.jpeg"
+  },
+  {
+    "id": "product-67",
+    "name": "LEGO 10332 medieval town square authentic and rare",
+    "price": "$370",
+    "image": "/assets/products/product-67.jpeg"
+  },
+  {
+    "id": "product-68",
+    "name": "LEGO 21118 the mine",
+    "price": "$230",
+    "image": "/assets/products/product-68.jpeg"
+  },
+  {
+    "id": "product-69",
+    "name": "LEGO 21128 minecraft the village",
+    "price": "$800",
+    "image": "/assets/products/product-69.jpeg"
+  },
+  {
+    "id": "product-70",
+    "name": "LEGO 21132 minecraft the jungle temple",
+    "price": "$1400",
+    "image": "/assets/products/product-70.jpeg"
+  },
+  {
+    "id": "product-71",
+    "name": "LEGO 21137 minecraft the mountain cave",
+    "price": "$1500",
+    "image": "/assets/products/product-71.webp"
+  },
+  {
+    "id": "product-72",
+    "name": "LEGO 70620 ninjago city",
+    "price": "$400",
+    "image": "/assets/products/product-72.jpeg"
+  },
+  {
+    "id": "product-73",
+    "name": "LEGO 10218 pet shop",
+    "price": "$190",
+    "image": "/assets/products/product-73.jpeg"
+  },
+  {
+    "id": "product-74",
+    "name": "LEGO 10212 star wars imperial shuttle",
+    "price": "$913",
+    "image": "/assets/products/product-74.jpeg"
+  },
+  {
+    "id": "product-75",
+    "name": "LEGO 10227 star wars b-wing starfighter",
+    "price": "$850",
+    "image": "/assets/products/product-75.jpg"
+  },
+  {
+    "id": "product-76",
+    "name": "LEGO 75155 star wars u-wing fighter",
+    "price": "$150",
+    "image": "/assets/products/product-76.jpg"
+  },
+  {
+    "id": "product-77",
+    "name": "LEGO 75222 star wars betrayal at cloud city",
+    "price": "$700",
+    "image": "/assets/products/product-77.jpg"
+  },
+  {
+    "id": "product-78",
+    "name": "LEGO 75313 star wars at-at",
+    "price": "$720",
+    "image": "/assets/products/product-78.jpg"
+  },
+  {
+    "id": "product-79",
+    "name": "LEGO 75277 star wars boba fett helmet",
+    "price": "$50",
+    "image": "/assets/products/product-79.jpg"
+  },
+  {
+    "id": "product-80",
+    "name": "LEGO 10210 star wars imperial flagship",
+    "price": "$900",
+    "image": "/assets/products/product-80.jpeg"
+  },
+  {
+    "id": "product-81",
+    "name": "LEGO 75192 star wars millennium falcon",
+    "price": "$700",
+    "image": "/assets/products/product-81.jpeg"
+  },
+  {
+    "id": "product-82",
+    "name": "LEGO 75290 star wars mos eisley cantina",
+    "price": "$400",
+    "image": "/assets/products/product-82.jpg"
+  },
+  {
+    "id": "product-83",
+    "name": "LEGO 75059 star wars sandcrawler",
+    "price": "$500",
+    "image": "/assets/products/product-83.jpg"
+  },
+  {
+    "id": "product-84",
+    "name": "LEGO 10221 star wars super star destroyer",
+    "price": "$1000",
+    "image": "/assets/products/product-84.jpg"
+  },
+  {
+    "id": "product-85",
+    "name": "LEGO 75274 star wars tie fighter pilot helmet",
+    "price": "$140",
+    "image": "/assets/products/product-85.avif"
+  },
+  {
+    "id": "product-86",
+    "name": "LEGO 75144 star wars ucs snowspeeder",
+    "price": "$450",
+    "image": "/assets/products/product-86.jpeg"
+  },
+  {
+    "id": "product-87",
+    "name": "LEGO 75367 star wars venator-class republic attack cruiser",
+    "price": "$650",
+    "image": "/assets/products/product-87.jpeg"
+  },
+  {
+    "id": "product-88",
+    "name": "LEGO 10236 star wars ewok village",
+    "price": "$550",
+    "image": "/assets/products/product-88.webp"
+  },
+  {
+    "id": "product-89",
+    "name": "LEGO 75810 stranger things the upside down",
+    "price": "$700",
+    "image": "/assets/products/product-89.jpg"
+  },
+  {
+    "id": "product-90",
+    "name": "LEGO 42129 mercedes benz zetros trial truck",
+    "price": "$300",
+    "image": "/assets/products/product-90.jpeg"
+  },
+  {
+    "id": "product-91",
+    "name": "LEGO technic 6x6 volvo hauler",
+    "price": "$210",
+    "image": "/assets/products/product-91.jpeg"
+  },
+  {
+    "id": "product-92",
+    "name": "LEGO 42055 technic bucket wheel excavator",
+    "price": "$305",
+    "image": "/assets/products/product-92.jpg"
+  },
+  {
+    "id": "product-93",
+    "name": "LEGO 42083 bugatti chiron",
+    "price": "$225",
+    "image": "/assets/products/product-93.jpg"
+  },
+  {
+    "id": "product-94",
+    "name": "LEGO 42143 ferrari daytona sp3",
+    "price": "$400",
+    "image": "/assets/products/product-94.jpeg"
+  },
+  {
+    "id": "product-95",
+    "name": "LEGO 42126 ford f-150 raptor",
+    "price": "$120",
+    "image": "/assets/products/product-95.webp"
+  },
+  {
+    "id": "product-96",
+    "name": "LEGO 42115 lamborghini sian fkp 37",
+    "price": "$250",
+    "image": "/assets/products/product-96.jpg"
+  },
+  {
+    "id": "product-97",
+    "name": "LEGO 42100 liebherr r 9800 excavator",
+    "price": "$550",
+    "image": "/assets/products/product-97.jpg"
+  },
+  {
+    "id": "product-98",
+    "name": "LEGO 42144 material handler",
+    "price": "$180",
+    "image": "/assets/products/product-98.jpeg"
+  },
+  {
+    "id": "product-99",
+    "name": "LEGO 42056 porsche 911 gt3 rs",
+    "price": "$800",
+    "image": "/assets/products/product-99.jpg"
+  },
+  {
+    "id": "product-100",
+    "name": "LEGO 42082 rough terrain crane",
+    "price": "$210",
+    "image": "/assets/products/product-100.jpg"
+  },
+  {
+    "id": "product-101",
+    "name": "LEGO 71006 the simpsons house",
+    "price": "$500",
+    "image": "/assets/products/product-101.jpg"
+  },
+  {
+    "id": "product-102",
+    "name": "LEGO 71016 the simpsons kwik-e-mart",
+    "price": "$600",
+    "image": "/assets/products/product-102.jpeg"
+  },
+  {
+    "id": "product-103",
+    "name": "LEGO the cullen house",
+    "price": "$180",
+    "image": "/assets/products/product-103.jpeg"
+  },
+  {
+    "id": "product-104",
+    "name": "LEGO willy wonka and the chocolate factory",
+    "price": "$190",
+    "image": "/assets/products/product-104.jpeg"
+  },
+  {
+    "id": "product-105",
+    "name": "LEGO mr and mrs claus living room",
+    "price": "$300",
+    "image": "/assets/products/product-105.webp"
+  },
+  {
+    "id": "product-106",
+    "name": "LEGO spider-man final battle",
+    "price": "$50",
+    "image": "/assets/products/product-106.jpeg"
+  },
+  {
+    "id": "product-107",
+    "name": "LEGO spiderman vs sandman final battle",
+    "price": "$50",
+    "image": "/assets/products/product-107.jpeg"
+  },
+  {
+    "id": "product-108",
+    "name": "LEGO 75810 stranger things the upside down",
+    "price": "$700",
+    "image": "/assets/products/product-108.jpeg"
+  },
+  {
+    "id": "product-109",
+    "name": "Product 109",
+    "price": "$773.00",
+    "image": "/assets/products/product-109.jpeg"
+  },
+  {
+    "id": "product-110",
+    "name": "Product 110",
+    "price": "$780.00",
+    "image": "/assets/products/product-110.jpg"
+  },
+  {
+    "id": "product-111",
+    "name": "Product 111",
+    "price": "$787.00",
+    "image": "/assets/products/product-111.jpg"
+  },
+  {
+    "id": "product-112",
+    "name": "Product 112",
+    "price": "$794.00",
+    "image": "/assets/products/product-112.jpg"
+  },
+  {
+    "id": "product-113",
+    "name": "Product 113",
+    "price": "$801.00",
+    "image": "/assets/products/product-113.jpg"
+  },
+  {
+    "id": "product-114",
+    "name": "Product 114",
+    "price": "$808.00",
+    "image": "/assets/products/product-114.jpg"
+  },
+  {
+    "id": "product-115",
+    "name": "Product 115",
+    "price": "$815.00",
+    "image": "/assets/products/product-115.jpg"
+  },
+  {
+    "id": "product-116",
+    "name": "Product 116",
+    "price": "$822.00",
+    "image": "/assets/products/product-116.jpg"
+  },
+  {
+    "id": "product-117",
+    "name": "Product 117",
+    "price": "$829.00",
+    "image": "/assets/products/product-117.jpg"
+  },
+  {
+    "id": "product-118",
+    "name": "Product 118",
+    "price": "$836.00",
+    "image": "/assets/products/product-118.jpg"
+  },
+  {
+    "id": "product-119",
+    "name": "Product 119",
+    "price": "$843.00",
+    "image": "/assets/products/product-119.jpg"
+  },
+  {
+    "id": "product-120",
+    "name": "Product 120",
+    "price": "$850.00",
+    "image": "/assets/products/product-120.jpg"
+  },
+  {
+    "id": "product-121",
+    "name": "Product 121",
+    "price": "$857.00",
+    "image": "/assets/products/product-121.jpg"
+  },
+  {
+    "id": "product-122",
+    "name": "Product 122",
+    "price": "$864.00",
+    "image": "/assets/products/product-122.jpg"
+  },
+  {
+    "id": "product-123",
+    "name": "Product 123",
+    "price": "$871.00",
+    "image": "/assets/products/product-123.jpg"
+  },
+  {
+    "id": "product-124",
+    "name": "Product 124",
+    "price": "$878.00",
+    "image": "/assets/products/product-124.jpg"
+  },
+  {
+    "id": "product-125",
+    "name": "Product 125",
+    "price": "$885.00",
+    "image": "/assets/products/product-125.jpg"
+  },
+  {
+    "id": "product-126",
+    "name": "Product 126",
+    "price": "$892.00",
+    "image": "/assets/products/product-126.jpg"
+  },
+  {
+    "id": "product-127",
+    "name": "Product 127",
+    "price": "$899.00",
+    "image": "/assets/products/product-127.jpg"
+  },
+  {
+    "id": "product-128",
+    "name": "Product 128",
+    "price": "$906.00",
+    "image": "/assets/products/product-128.jpg"
+  },
+  {
+    "id": "product-129",
+    "name": "Product 129",
+    "price": "$913.00",
+    "image": "/assets/products/product-129.jpg"
+  },
+  {
+    "id": "product-130",
+    "name": "Product 130",
+    "price": "$920.00",
+    "image": "/assets/products/product-130.jpg"
+  },
+  {
+    "id": "product-131",
+    "name": "Product 131",
+    "price": "$927.00",
+    "image": "/assets/products/product-131.jpg"
+  },
+  {
+    "id": "product-132",
+    "name": "Product 132",
+    "price": "$934.00",
+    "image": "/assets/products/product-132.jpg"
+  },
+  {
+    "id": "product-133",
+    "name": "Product 133",
+    "price": "$941.00",
+    "image": "/assets/products/product-133.jpg"
+  },
+  {
+    "id": "product-134",
+    "name": "Product 134",
+    "price": "$948.00",
+    "image": "/assets/products/product-134.jpg"
+  },
+  {
+    "id": "product-135",
+    "name": "Product 135",
+    "price": "$955.00",
+    "image": "/assets/products/product-135.jpg"
+  },
+  {
+    "id": "product-136",
+    "name": "Product 136",
+    "price": "$962.00",
+    "image": "/assets/products/product-136.jpg"
+  },
+  {
+    "id": "product-137",
+    "name": "Product 137",
+    "price": "$969.00",
+    "image": "/assets/products/product-137.jpg"
+  },
+  {
+    "id": "product-138",
+    "name": "Product 138",
+    "price": "$976.00",
+    "image": "/assets/products/product-138.jpg"
+  },
+  {
+    "id": "product-139",
+    "name": "Product 139",
+    "price": "$983.00",
+    "image": "/assets/products/product-139.jpg"
+  },
+  {
+    "id": "product-140",
+    "name": "Product 140",
+    "price": "$990.00",
+    "image": "/assets/products/product-140.jpg"
+  },
+  {
+    "id": "product-141",
+    "name": "Product 141",
+    "price": "$997.00",
+    "image": "/assets/products/product-141.jpg"
+  },
+  {
+    "id": "product-142",
+    "name": "Product 142",
+    "price": "$1004.00",
+    "image": "/assets/products/product-142.jpg"
+  },
+  {
+    "id": "product-143",
+    "name": "Product 143",
+    "price": "$1011.00",
+    "image": "/assets/products/product-143.jpg"
+  },
+  {
+    "id": "product-144",
+    "name": "Product 144",
+    "price": "$1018.00",
+    "image": "/assets/products/product-144.jpg"
+  }
+]
