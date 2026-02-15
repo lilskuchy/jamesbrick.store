@@ -9,15 +9,17 @@
    Color palette & variables
    --------------------------- */
 :root{
-  --bg: #F6F5F2;
-  --surface: #FFFFFF;
-  --muted: #7B7B7B;
-  --text: #111827;
+  --bg: #F8F9FB; /* Page Background */
+  --alt-bg: #F1F3F6; /* Alt Section Background */
+  --surface: #FFFFFF; /* Card Background */
+  --muted: #6B7280; /* Muted Text */
+  --text: #0B0F19; /* Heading / primary text */
   --accent: #B88931; /* warm gold */
   --accent-2: #8A7350; /* complementary warm tone */
-  --navy: #0F1724; /* deep navy for premium feel */
+  --navy: #0F172A; /* Dark Section */
   --glass: rgba(255,255,255,0.6);
   --shadow: 0 8px 20px rgba(17,24,39,0.08);
+  --border: #E5E7EB; /* Border / Divider */
   --radius: 10px;
   --container-width: 1200px;
   --transition: 180ms cubic-bezier(.2,.9,.3,1);
@@ -32,7 +34,7 @@ body{
   margin:0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color:var(--text);
-  background:linear-gradient(180deg,var(--bg),#f2f1ee);
+  background:linear-gradient(180deg,var(--bg),var(--alt-bg));
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
@@ -68,7 +70,7 @@ body{
 .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 12px 30px rgba(17,24,39,0.08) }
 .btn-outline{
   background:transparent;
-  border:1px solid rgba(17,24,39,0.06);
+  border:1px solid var(--border);
   color:var(--navy);
 }
 .btn-ghost{
@@ -85,7 +87,7 @@ body{
   z-index:120;
   backdrop-filter:saturate(110%) blur(4px);
   background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.55));
-  border-bottom:1px solid rgba(17,24,39,0.04);
+  border-bottom:1px solid var(--border);
 }
 .header-inner{
   display:flex;
@@ -97,6 +99,39 @@ body{
 .brand{display:flex; align-items:center; gap:.6rem; text-decoration:none}
 .logo{height:44px}
 .logo-small{height:34px}
+
+/* Mobile nav improvements */
+.mobile-menu-btn{display:none; background:transparent; border:0; padding:.5rem; cursor:pointer}
+.mobile-menu-btn .hamburger{display:block; width:22px; height:2px; background:var(--navy); position:relative}
+.mobile-menu-btn .hamburger::after, .mobile-menu-btn .hamburger::before{content:''; position:absolute; left:0; right:0; height:2px; background:var(--navy);}
+.mobile-menu-btn .hamburger::before{top:-6px}
+.mobile-menu-btn .hamburger::after{bottom:-6px}
+
+/* Control nav visibility using body.nav-open for mobile */
+body.nav-open .main-nav{display:block}
+.main-nav{display:block}
+.main-nav ul{display:flex; gap:1rem; align-items:center}
+
+@media (max-width:640px){
+  .mobile-menu-btn{display:block}
+  .main-nav{display:none}
+  /* when open, show an overlay panel anchored under header */
+  body.nav-open .main-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    top:64px;
+    bottom:0;
+    background:linear-gradient(180deg,var(--surface),var(--bg));
+    padding:1rem;
+    overflow-y:auto;
+    box-shadow:0 12px 30px rgba(6,11,22,0.12);
+    z-index:140;
+    display:block;
+  }
+  .main-nav ul{flex-direction:column; gap:1rem}
+  .main-nav a{display:block; padding:.6rem .4rem}
+}
 
 .main-nav ul{
   display:flex;
@@ -112,7 +147,7 @@ body{
   border-radius:8px;
   font-weight:600;
 }
-.main-nav a:hover{background:rgba(11,22,40,0.04)}
+.main-nav a:hover{background:var(--alt-bg)}
 
 /* Mobile menu */
 .mobile-menu-btn{
@@ -141,7 +176,7 @@ body{
 
 /* WhatsApp button */
 .whatsapp-btn{
-  border:1px solid rgba(11,22,40,0.06);
+  border:1px solid var(--border);
   padding:.5rem .8rem;
   border-radius:8px;
 }
@@ -214,6 +249,34 @@ body{
 .price{font-weight:700; color:var(--navy)}
 
 /* ---------------------------
+   Carousel (featured products)
+   --------------------------- */
+.carousel{position:relative; overflow:hidden; padding:0.5rem 0}
+.carousel-viewport{overflow:hidden; perspective:1400px}
+.carousel-track{display:flex; gap:1.25rem; transition:transform 700ms cubic-bezier(.2,0.9,.28,1); will-change:transform; padding:0.5rem; transform-style:preserve-3d}
+.carousel-slide{flex:0 0 100%; transform-origin:center center; transition:transform 560ms cubic-bezier(.2,0.9,.28,1), opacity 420ms ease; backface-visibility:hidden}
+.carousel-arrow{position:absolute; top:50%; transform:translateY(-50%); background:var(--surface); border-radius:8px; border:1px solid var(--border); width:40px; height:40px; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:30}
+.carousel-arrow.prev{left:12px}
+.carousel-arrow.next{right:12px}
+.carousel-dots{display:flex; gap:.5rem; justify-content:center; margin-top:.75rem}
+.carousel-dot{width:8px; height:8px; border-radius:50%; background:var(--navy); opacity:0.14; cursor:pointer; transition:opacity 180ms ease, transform 180ms ease}
+.carousel-dot.active{opacity:0.42; transform:scale(1.06)}
+
+/* 3D cover-flow adjustments */
+.carousel-slide.inactive{pointer-events:none}
+.carousel-track.animating .carousel-slide{will-change:transform,opacity}
+
+@media (min-width:640px){
+  .carousel-slide{flex:0 0 calc(50% - 0.625rem)}
+}
+@media (min-width:900px){
+  .carousel-slide{flex:0 0 calc(33.333% - 0.833rem)}
+}
+@media (min-width:1200px){
+  .carousel-slide{flex:0 0 calc(25% - 0.9375rem)}
+}
+
+/* ---------------------------
    About / Teasers / Layouts
    --------------------------- */
 .about-teaser{
@@ -243,6 +306,89 @@ body{
 }
 .about-images img{width:100%; border-radius:10px; margin-bottom:1rem}
 
+.jumbotron{
+  margin: 3rem 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.jumbotron h2{
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.jumbotron p{
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.trust-section{
+  margin: 3rem 0;
+  text-align: center;
+}
+.trust-section h2{
+  font-family: "Merriweather", serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.trust-badges{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.badge{
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.badge img{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+.badge p{
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.stats-section{
+  margin: 3rem 0;
+  text-align: center;
+}
+.stats-section h2{
+  font-family: "Merriweather", serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.stats-grid{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.stat{
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 150px;
+}
+.stat h3{
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.counter{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
 /* ---------------------------
    Contact / Forms
    --------------------------- */
@@ -250,66 +396,42 @@ body{
 .form-row label{font-weight:600; color:var(--navy)}
 .form-row input, .form-row textarea, .form-row select{
   padding:.7rem .9rem;
-  border:1px solid rgba(11,22,40,0.08);
+  border:1px solid var(--border);
   border-radius:8px;
   background:transparent;
   font-size:1rem;
 }
 .form-actions{display:flex; gap:.6rem; align-items:center}
 
-.contact-info-section {
-  background: var(--card-bg, #fff);
-  border-radius: 8px;
-  margin-top: 26px;
-  padding: 24px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.06);
-  width: 100%;
-  max-width: 100%;
-  /* Align with contact-form */
+/* Contact page specific layout */
+.contact-grid{padding-top:0}
+.contact-inner{
+  max-width:720px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
 }
-
-.contact-info-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact-form{background:transparent}
+.contact-cards{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1rem;
+  margin-top:1.25rem;
+  width:100%;
 }
-
-.contact-info-block {
-  flex: 1 1 0px;
+.card{
+  background:var(--surface);
+  border-radius:12px;
+  padding:1.25rem;
+  box-shadow:var(--shadow);
+  min-height:120px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
-
-.contact-info-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.contact-info-list li {
-  margin-bottom: 8px;
-  font-size: 15px;
-  color: #222;
-}
-
-.contact-info-block h3 {
-  font-size: 1.17rem;
-  margin: 0 0 10px 0;
-}
-
-@media (min-width: 769px) {
-  .contact-info-grid {
-    flex-direction: row;
-    gap: 32px;
-  }
-  .contact-info-block {
-    min-width: 0;
-  }
-}
-
-/* For better spacing on the sides to match the contact form on small screens */
-@media (max-width: 480px) {
-  .contact-info-section {
-    padding: 16px 6px;
-  }
-}
+.card h3{margin:0 0 .5rem 0}
+.card p{margin:0 0 .5rem 0}
 
 /* ---------------------------
    Modal (Order)
@@ -357,7 +479,11 @@ body{
   align-items:center;
   justify-content:space-between;
 }
-.footer-links ul{list-style:none; padding:0; margin:0; display:flex; gap:1rem; text-decoration: none;}
+.footer-inner.footer-centered{flex-direction:column; align-items:center; text-align:center}
+.footer-nav ul{list-style:none; padding:0; margin:0; display:flex; gap:1.5rem; justify-content:center}
+.footer-nav a{color:var(--muted); text-decoration:none; font-weight:600}
+.footer-divider{width:100%; max-width:900px; height:1px; background:var(--border); border:0; margin:0.75rem 0}
+.footer-copy{margin:0; padding:0; font-size:0.95rem}
 
 /* ---------------------------
    Responsive
@@ -367,6 +493,10 @@ body{
   .product-grid, .shop-grid{grid-template-columns:repeat(2,1fr)}
   .about-grid{grid-template-columns:1fr}
   .teaser-grid{grid-template-columns:1fr}
+  .jumbotron{padding: 2rem}
+  .trust-badges{flex-direction: column; align-items: center}
+  .stats-grid{flex-direction: column; align-items: center}
+  .contact-cards{grid-template-columns:repeat(2,1fr)}
 }
 
 @media (max-width:640px){
@@ -377,6 +507,14 @@ body{
   .hero-image{display:none}
   .hero-text h1{font-size:1.6rem}
   .footer-inner{flex-direction:column; align-items:flex-start; gap:1rem}
+
+  /* Contact page: stack everything vertically on mobile */
+  .contact-inner{padding:0 0}
+  .contact-cards{grid-template-columns:1fr}
+
+  .jumbotron{margin: 2rem 0; padding: 1.5rem}
+  .trust-badges{gap: 1rem}
+  .stats-grid{gap: 1rem}
 }
 
 
@@ -475,5 +613,4 @@ body{
   .testimonial-card,
   .product-card,
   .btn{ transition: none !important; transform: none !important; }
-
 }
