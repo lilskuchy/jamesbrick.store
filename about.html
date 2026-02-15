@@ -23,7 +23,7 @@
       </nav>
       <div class="header-actions">
         <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/+447700141991" target="_blank" rel="noopener">WhatsApp</a>
-        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
           <span class="hamburger"></span>
         </button>
       </div>
@@ -35,6 +35,48 @@
     <section class="about-hero">
       <h1>Our Mission</h1>
       <p class="lead">To curate exceptional Lego collections that celebrate design, history, and the joy of building—presented with a premium, collector-focused experience.</p>
+    </section>
+
+    <section class="jumbotron business-story">
+      <h2>Our Story</h2>
+      <p>JamesBrick Store was founded with a passion for Lego and a commitment to providing collectors with the best experience. We source sets and elements for condition, authenticity, and presentation. Each listing is inspected and documented to maintain the highest standards for collectors and hobbyists.</p>
+      <p>We prioritize trusted providers and transparent histories for each set—ensuring fair pricing and clear provenance. Our mission is to make collecting Lego accessible and enjoyable for everyone.</p>
+    </section>
+
+    <section class="trust-section">
+      <h2>Trusted by Collectors Worldwide</h2>
+      <div class="trust-badges">
+        <div class="badge">
+          <div class="badge-icon">🔒</div>
+          <p>Secure Payments</p>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">✅</div>
+          <p>Authentic Products</p>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">🚚</div>
+          <p>Fast Shipping</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <h2>Our Achievements</h2>
+      <div class="stats-grid">
+        <div class="stat">
+          <h3>Orders Received</h3>
+          <div id="order-counter" class="counter">0</div>
+        </div>
+        <div class="stat">
+          <h3>Happy Customers</h3>
+          <div id="customer-counter" class="counter">0</div>
+        </div>
+        <div class="stat">
+          <h3>Years in Business</h3>
+          <div id="years-counter" class="counter">0</div>
+        </div>
+      </div>
     </section>
 
     <section class="about-content">
@@ -56,24 +98,19 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="logo.svg" alt="jamesbrick.store" class="logo-small">
-      </div>
-      <div class="footer-links">
-        <nav aria-label="Footer Navigation">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html" aria-current="page">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="container footer-inner footer-centered">
+      <nav aria-label="Footer Navigation" class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-      <div class="footer-contact">
-        <p class="muted">© <span id="year-4"></span> jamesbrick.store</p>
-      </div>
+      <hr class="footer-divider" aria-hidden="true">
+
+      <p class="muted footer-copy">© <span id="year"></span> jamesbrick.store</p>
     </div>
   </footer>
 
