@@ -26,7 +26,7 @@
 
       <div class="header-actions">
         <a class="btn btn-ghost whatsapp-btn" href="https://wa.me/PHONE_NUMBER" target="_blank" rel="noopener">WhatsApp</a>
-        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu">
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
           <span class="hamburger"></span>
         </button>
       </div>
@@ -41,38 +41,12 @@
     </section>
 
     <!-- Shop Grid -->
-    <!-- Product Grid component: each card has image, name, price, Order Now -->
+    <!-- Product Grid component: populated dynamically by main.js -->
     <section class="shop-grid" id="shop-grid">
-      <!-- Example product card -->
-      <article class="product-card" id="vintage-space">
-        <img src="https://images.unsplash.com/photo-1542293787938-c9e299b8803f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a3b4b8d7e9f30c8a2d4c3dc3d9e4f7a6" alt="Vintage Space Cruiser" loading="lazy">
-        <div class="product-body">
-          <h3>Vintage Space Cruiser</h3>
-          <p class="price">$179.00</p>
-          <button class="btn btn-primary order-now" data-product="Vintage Space Cruiser" data-price="$179.00">Order Now</button>
-        </div>
-      </article>
-
-      <article class="product-card" id="landmark">
-        <img src="https://images.unsplash.com/photo-1606813902897-2d6f7f0a2c12?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=a8f6b7c2d3e4a5b6c7d8e9f0a1b2c3d4" alt="Architectural Landmark" loading="lazy">
-        <div class="product-body">
-          <h3>Architectural Series — Landmark</h3>
-          <p class="price">$249.00</p>
-          <button class="btn btn-primary order-now" data-product="Architectural Series — Landmark" data-price="$249.00">Order Now</button>
-        </div>
-      </article>
-
-      <article class="product-card" id="classic-car">
-        <img src="https://images.unsplash.com/photo-1590327333184-1bc2a6f2b7cc?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b2d1f0c5e6a7b8c9d0e1f2a3b4c5d6e" alt="Collector's Classic Car" loading="lazy">
-        <div class="product-body">
-          <h3>Collector's Classic Car</h3>
-          <p class="price">$199.00</p>
-          <button class="btn btn-primary order-now" data-product="Collector's Classic Car" data-price="$199.00">Order Now</button>
-        </div>
-      </article>
-
-      <!-- Add more product cards as needed -->
+      <!-- Product cards are injected here by JavaScript. -->
+      <!-- Place your product images in `/assets/products/` named: product-1.jpg .. product-109.jpg -->
     </section>
+    <div id="pagination" class="pagination" aria-label="Pagination"></div>
   </main>
 
   <!-- Order Modal -->
@@ -111,24 +85,19 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.svg" alt="jamesbrick.store" class="logo-small">
-      </div>
-      <div class="footer-links">
-        <nav aria-label="Footer Navigation">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html" aria-current="page">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="container footer-inner footer-centered">
+      <nav aria-label="Footer Navigation" class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-      <div class="footer-contact">
-        <p class="muted">© <span id="year-2"></span> jamesbrick.store</p>
-      </div>
+      <hr class="footer-divider" aria-hidden="true">
+
+      <p class="muted footer-copy">© <span id="year"></span> jamesbrick.store</p>
     </div>
   </footer>
 
